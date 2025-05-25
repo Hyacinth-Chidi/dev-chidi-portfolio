@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Dev Chidi | Web & Mobile Developer",
   description:
     "Professional portfolio of Dev Chidi, a web and mobile app developer specializing in creating stunning digital experiences.",
+  metadataBase: new URL("https://dev-chidi.vercel.app"),
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -29,6 +30,38 @@ export const metadata: Metadata = {
     ]
   },
   manifest: "/manifest.json",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "/",
+    title: "Dev Chidi | Web & Mobile Developer",
+    description: "Professional portfolio of Dev Chidi, a web and mobile app developer specializing in creating stunning digital experiences.",
+    siteName: "Dev Chidi Portfolio",
+    images: [
+      {
+        url: "/logo.png",
+        width: 500,
+        height: 500,
+        alt: "Dev Chidi Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dev Chidi | Web & Mobile Developer",
+    description: "Professional portfolio of Dev Chidi, a web and mobile app developer specializing in creating stunning digital experiences.",
+    images: ["/logo.png"],
+    creator: "@hyacinth_jeo",
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function RootLayout({
@@ -38,12 +71,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3B82F6" />
-      </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}

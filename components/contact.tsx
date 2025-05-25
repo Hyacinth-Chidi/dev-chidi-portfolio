@@ -157,10 +157,10 @@ export default function Contact() {
                   <div>
                     <h4 className="font-medium">Email</h4>
                     <a
-                      href="mailto:contact@devchidi.com"
+                      href="mailto:metaweb150@gmail.com"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      contact@devchidi.com
+                      metaweb150@gmail.com
                     </a>
                   </div>
                 </div>
@@ -171,8 +171,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-medium">Phone</h4>
-                    <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
-                      +1 (234) 567-890
+                    <a href="tel:+2348167342730" className="text-muted-foreground hover:text-primary transition-colors">
+                      + (234) 8167342730
                     </a>
                   </div>
                 </div>
@@ -183,7 +183,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-medium">Location</h4>
-                    <p className="text-muted-foreground">San Francisco, California, USA</p>
+                    <p className="text-muted-foreground"> Lagos, Nigeria</p>
                   </div>
                 </div>
               </div>
@@ -195,7 +195,7 @@ export default function Contact() {
                 </p>
                 <div className="flex gap-4">
                   <a
-                    href="#"
+                    href="https://github.com/Hyacinth-Chidi"
                     className="bg-card hover:bg-card/80 border p-3 rounded-full text-foreground hover:text-primary transition-colors"
                     aria-label="GitHub"
                   >
@@ -217,7 +217,7 @@ export default function Contact() {
                     </svg>
                   </a>
                   <a
-                    href="#"
+                    href="https://x.com/hyacinth_jeo"
                     className="bg-card hover:bg-card/80 border p-3 rounded-full text-foreground hover:text-primary transition-colors"
                     aria-label="Twitter"
                   >

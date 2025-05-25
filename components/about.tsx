@@ -28,7 +28,7 @@ export default function About() {
               <div className="absolute -inset-4 rounded-xl bg-gradient-to-r from-primary/30 to-secondary/20 blur-xl"></div>
               <div className="relative rounded-xl overflow-hidden border-4 border-background shadow-xl">
                 <Image
-                  src="/placeholder.svg?height=600&width=600"
+                  src="/AboutMex.png?height=600&width=600"
                   alt="Dev Chidi"
                   width={600}
                   height={600}

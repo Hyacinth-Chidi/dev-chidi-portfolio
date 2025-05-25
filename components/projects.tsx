@@ -21,47 +21,37 @@ type Project = {
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("all")
 
-  const projects: Project[] = [
+  const webProjects: Project[] = [
+    {
+      id: 7,
+      title: "IPLINK",
+      description:
+        "Link in Bio Platform. UNDER DEVELOPMENT",
+      image: "/iplinkShot.jpg?height=600&width=800",
+      tags: ["React", "Node.js", "MongoDB", "Stripe"],
+      category: "web",
+      githubUrl: "https://github.com/Hyacinth-Chidi/dev-chidi-portfolio",
+      liveUrl: "https://v0-iplink-app.vercel.app/",
+    },
     {
       id: 1,
       title: "E-Commerce Platform",
       description:
         "A full-featured e-commerce platform with payment integration, user authentication, and admin dashboard.",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/development.jpg?height=600&width=800",
       tags: ["React", "Node.js", "MongoDB", "Stripe"],
       category: "web",
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-    },
-    {
-      id: 2,
-      title: "Fitness Tracker App",
-      description:
-        "Mobile application for tracking workouts, nutrition, and progress with personalized recommendations.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["React Native", "Firebase", "Redux"],
-      category: "mobile",
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
+      githubUrl: "https://github.com/Hyacinth-Chidi",
+      liveUrl: "#",
     },
     {
       id: 3,
-      title: "Real Estate Dashboard",
+      title: "Real Estate Dashboard *Soon",
       description: "Interactive dashboard for real estate agents to manage listings, clients, and analytics.",
       image: "/placeholder.svg?height=600&width=800",
       tags: ["Next.js", "Tailwind CSS", "Supabase"],
       category: "web",
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-    },
-    {
-      id: 4,
-      title: "Food Delivery App",
-      description: "Mobile app for ordering food from local restaurants with real-time order tracking.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["Flutter", "Firebase", "Google Maps API"],
-      category: "mobile",
-      githubUrl: "https://github.com",
+      githubUrl: "https://github.com/Hyacinth-Chidi",
       liveUrl: "https://example.com",
     },
     {
@@ -71,8 +61,8 @@ export default function Projects() {
       image: "/placeholder.svg?height=600&width=800",
       tags: ["React", "Framer Motion", "Three.js"],
       category: "web",
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
+      githubUrl: "https://github.com/Hyacinth-Chidi",
+      liveUrl: "#",
     },
     {
       id: 6,
@@ -81,13 +71,37 @@ export default function Projects() {
       image: "/placeholder.svg?height=600&width=800",
       tags: ["Vue.js", "Express", "Socket.io"],
       category: "web",
-      githubUrl: "https://github.com",
+      githubUrl: "https://github.com/Hyacinth-Chidi",
       liveUrl: "https://example.com",
     },
   ]
 
-  const filteredProjects =
-    activeCategory === "all" ? projects : projects.filter((project) => project.category === activeCategory)
+  const mobileProjects: Project[] = [
+    {
+      id: 2,
+      title: "Fitness Tracker App",
+      description:
+        "Mobile application for tracking workouts, nutrition, and progress with personalized recommendations.",
+      image: "/fitness.png?height=600&width=800",
+      tags: ["React Native", "Firebase", "Redux"],
+      category: "mobile",
+      githubUrl: "https://github.com/Hyacinth-Chidi",
+      liveUrl: "#",
+    },
+    {
+      id: 4,
+      title: "Food Delivery App",
+      description: "Mobile app for ordering food from local restaurants with real-time order tracking.",
+      image: "/placeholder.svg?height=600&width=800",
+      tags: ["Flutter", "Firebase", "Google Maps API"],
+      category: "mobile",
+      githubUrl: "https://github.com/Hyacinth-Chidi",
+      liveUrl: "https://example.com",
+    },
+  ]
+
+  // Combine all projects
+  const allProjects: Project[] = [...webProjects, ...mobileProjects]
 
   const container = {
     hidden: { opacity: 0 },
@@ -138,7 +152,7 @@ export default function Projects() {
               whileInView="show"
               viewport={{ once: true }}
             >
-              {filteredProjects.map((project) => (
+              {allProjects.map((project) => (
                 <ProjectCard key={project.id} project={project} />
               ))}
             </motion.div>
@@ -152,7 +166,7 @@ export default function Projects() {
               whileInView="show"
               viewport={{ once: true }}
             >
-              {filteredProjects.map((project) => (
+              {webProjects.map((project) => (
                 <ProjectCard key={project.id} project={project} />
               ))}
             </motion.div>
@@ -166,7 +180,7 @@ export default function Projects() {
               whileInView="show"
               viewport={{ once: true }}
             >
-              {filteredProjects.map((project) => (
+              {mobileProjects.map((project) => (
                 <ProjectCard key={project.id} project={project} />
               ))}
             </motion.div>

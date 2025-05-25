@@ -28,6 +28,8 @@ export default function Hero() {
     return () => window.removeEventListener("mousemove", handleMouseMove)
   }, [])
 
+
+
   return (
     <section id="home" className="pt-24 pb-16 md:pt-32 md:pb-24">
       <div className="container mx-auto px-4">
@@ -47,7 +49,13 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button size="lg" className="group">
+              <Button 
+                size="lg" 
+                className="group"
+                onClick={() => {
+                  document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 View My Work
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
@@ -58,7 +66,7 @@ export default function Hero() {
 
             <div className="flex items-center gap-6">
               <a
-                href="https://github.com"
+                href="https://github.com/Hyacinth-Chidi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -76,7 +84,7 @@ export default function Hero() {
                 <span className="sr-only">LinkedIn</span>
               </a>
               <a
-                href="https://twitter.com"
+                href="https://twitter.com/hyacinth_jeo"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"

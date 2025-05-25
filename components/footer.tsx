@@ -17,13 +17,13 @@ export default function Footer() {
               web and mobile solutions.
             </p>
             <div className="flex items-center gap-4 mt-6">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="GitHub">
+              <a href="https://github.com/Hyacinth-Chidi" className="text-muted-foreground hover:text-primary transition-colors" aria-label="GitHub">
                 <Github size={20} />
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Twitter">
+              <a href="https://x.com/hyacinth_jeo" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Twitter">
                 <Twitter size={20} />
               </a>
               <a

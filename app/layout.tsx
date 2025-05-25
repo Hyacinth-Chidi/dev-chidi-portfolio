@@ -14,18 +14,19 @@ export const metadata: Metadata = {
     "Professional portfolio of Dev Chidi, a web and mobile app developer specializing in creating stunning digital experiences.",
   icons: {
     icon: [
-      {
-        url: "/placeholder-logo.png",
-        href: "/placeholder-logo.png",
-      },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.svg", type: "image/svg+xml" },
     ],
     apple: [
-      {
-        url: "/placeholder-logo.png",
-        sizes: "180x180",
-        type: "image/png",
-      },
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
+    other: [
+      {
+        rel: "mask-icon",
+        url: "/safari-pinned-tab.svg",
+        color: "#3B82F6"
+      }
+    ]
   },
   manifest: "/manifest.json",
 }
@@ -38,8 +39,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/placeholder-logo.png" />
-        <link rel="apple-touch-icon" href="/placeholder-logo.png" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3B82F6" />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>

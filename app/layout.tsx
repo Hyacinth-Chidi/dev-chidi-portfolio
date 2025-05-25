@@ -1,5 +1,5 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -7,6 +7,12 @@ import CursorEffects from "@/components/cursor-effects"
 import CursorTest from "@/components/cursor-test"
 
 const inter = Inter({ subsets: ["latin"] })
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+}
 
 export const metadata: Metadata = {
   title: "Dev Chidi | Web & Mobile Developer",
@@ -52,11 +58,6 @@ export const metadata: Metadata = {
     description: "Professional portfolio of Dev Chidi, a web and mobile app developer specializing in creating stunning digital experiences.",
     images: ["/logo.png"],
     creator: "@hyacinth_jeo",
-  },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
   },
   robots: {
     index: true,
